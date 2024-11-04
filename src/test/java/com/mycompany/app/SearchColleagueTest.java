@@ -66,6 +66,7 @@ public class SearchColleagueTest {
     try {
       
       click.click();
+      waitForStaleness(click, 10);
       
       // Wait for the fluid button to become stale after clicking
     
@@ -84,12 +85,6 @@ public class SearchColleagueTest {
        
   }
 
-  try {
-    click.isDisplayed(); // This will throw an exception if the button is still present
-    System.out.println("The button is still present in the DOM.");
-} catch (NoSuchElementException e) {
-    System.out.println("The button has been removed from the DOM.");
-}
     // {
     //   WebElement element = waitForElement(By.linkText("Christian Santiago Vera Rojas"),10);
     //   Actions builder = new Actions(driver);
